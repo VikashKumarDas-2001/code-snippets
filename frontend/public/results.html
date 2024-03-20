@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Snippet Results</title>
+    <!-- Your CSS styles here -->
+    
+</head>
+<body>
+    <h2>Code Snippet Results</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Code Language</th>
+                <th>Standard Input (stdin)</th>
+                <th>Timestamp</th>
+                <th>Source Code (First 100 characters)</th>
+                <th>Output (stdout)</th>
+            </tr>
+        </thead>
+        <tbody id="snippetResults">
+            <!-- Dynamically populate this section using JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        // Fetch code snippets from the backend and populate the table
+        fetch('/snippets?username=User1') // Change username as needed
+            .then(response => response.json())
+            .then(data => {
+                const snippetResults = document.getElementById('snippetResults');
+                data.forEach(snippet => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${snippet.username}</td>
+                        <td>${snippet.language}</td>
+                        <td>${snippet.stdin}</td>
+                        <td>${snippet.timestamp}</td>
+                        <td>${snippet.sourcecode.substring(0, 100)}</td>
+                        <td>${snippet.stdout}</td>
+                    `;
+                    snippetResults.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching snippet results:', error));
+    </script>
+</body>
+</html>
