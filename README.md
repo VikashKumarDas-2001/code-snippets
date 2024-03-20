@@ -6,7 +6,7 @@ This project is a collection of code snippets for getting started with React app
 ![React App Screenshot](https://github.com/VikashKumarDas-2001/code-snippets/blob/main/Screenshot%202024-03-20%20215118.png)
 
 ##Submitted Snippets
-![React App Screenshot](https://github.com/VikashKumarDas-2001/code-snippets/blob/main/Screenshot%202024-03-20%20215118.png)
+![React App Screenshot](https://github.com/VikashKumarDas-2001/code-snippets/blob/main/Screenshot%202024-03-20%20215825.png)
 
 
 
